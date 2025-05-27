@@ -1,0 +1,1 @@
+Revisando os conceitos básicos de CSS lendo esse tutorial do Mozilla: [CSS tutorial](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics).
