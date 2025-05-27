@@ -1,0 +1,1 @@
+Revisando os conceitos básicos de HTML lendo esse tutorial do Mozilla: [HTML tutorial](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics).
