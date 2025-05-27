@@ -2,7 +2,7 @@
 
 Criando um diagrama de sequência que retrate a cadeia de eventos causada pela situação em que o usuário cria uma nova nota [nesta página](https://studies.cs.helsinki.fi/exampleapp/notes) escrevendo algo no campo de texto e clicando no botão submit.
 
-```mermaid
+```	
 	participante: navegador
 	participante: servidor
 
