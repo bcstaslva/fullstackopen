@@ -1,8 +1,6 @@
-// Resolução dos exercício 1.1 e 1.2 da Part1
+// Resolução dos exercício 1.3 e 1.5 da Part1
 
-const Header = () => {
-  const course = 'Desenvolvimento de Aplicação Half Stack';
-
+const Header = ({ course }) => {
   return (
     <div>
       <h1>{course}</h1>
@@ -10,19 +8,20 @@ const Header = () => {
   );
 };
 
-const Content = ({parts}) => {
+const Content = ({ parts }) => {
+  const [part1, part2, part3] = parts;
   return (
     <div>
-      <p>{parts[0].part} {parts[0].exercise}</p>
-      <p>{parts[1].part} {parts[1].exercise}</p>
-      <p>{parts[2].part} {parts[2].exercise}</p>
+      <p>{part1.name} {part1.exercises}</p>
+      <p>{part2.name} {part2.exercises}</p>
+      <p>{part3.name} {part3.exercises}</p>
     </div>
   );
 };
 
-const Total = ({parts}) => {
+const Total = ({ parts }) => {
   const total = parts.reduce((total, parts) => {
-    return total + parts.exercise;
+    return total + parts.exercises;
   }, 0);
 
   return (
@@ -33,17 +32,20 @@ const Total = ({parts}) => {
 };
 
 const App = () => {
-  const parts = [
-    {part: 'Fundamentos da biblioteca React', exercise: 10},
-    {part: 'Ussado props para passar dados', exercise: 7},
-    {part: 'Estado de um componente', exercise: 14}
-  ];
+  const course = {
+    name: 'Desenvolvimento de Aplicação Half Stack',
+    parts: [
+      { name: 'Fundamentos da biblioteca React', exercises: 10 },
+      { name: 'Ussado props para passar dados', exercises: 7 },
+      { name: 'Estado de um componente', exercises: 14 },
+    ],
+  };
 
   return (
     <div>
-      <Header />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
     </div>
   );
 };
